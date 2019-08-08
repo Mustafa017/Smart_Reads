@@ -1,0 +1,53 @@
+{
+  "name": "qualifiedio-tests",
+  "version": "1.0.0",
+  "description": "test libraries",
+  "main": "data/server.js",
+  "scripts": {
+    "start": "set DEBUG=server & nodemon data/server.js",
+    "test": "mocha --reporter progress test/testSetup.js test/palindrome-test.js"
+  },
+  "keywords": [
+    "tests"
+  ],
+  "engines": {
+    "node": "10.15.3"
+  },
+  "author": "Mustafa Khamisi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.18.0",
+    "body-parser": "1.18.3",
+    "bootstrap": "4.3.1",
+    "chai": "4.2.0",
+    "chalk": "2.4.2",
+    "debug": "4.1.1",
+    "ejs": "2.6.1",
+    "express": "4.16.4",
+    "jquery": "3.3.1",
+    "jsdom": "14.0.0",
+    "mocha": "6.1.1",
+    "mongoose": "5.5.0",
+    "morgan": "1.9.1",
+    "nodemon": "1.18.10",
+    "pug": "2.0.3",
+    "request": "2.88.0",
+    "xml2js": "0.4.19"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-latest": "6.24.1",
+    "babel-register": "6.26.0"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 3000
+    }
+  }
+}
